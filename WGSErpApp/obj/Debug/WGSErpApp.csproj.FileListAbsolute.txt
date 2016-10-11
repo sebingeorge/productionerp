@@ -66,3 +66,4 @@ D:\Projects\WGSErp\WGSErpApp\WGSErpApp\bin\Microsoft.Owin.Security.Twitter.xml
 D:\Projects\WGSErp\WGSErpApp\WGSErpApp\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 D:\Projects\WGSErp\WGSErpApp\WGSErpApp\obj\Debug\WGSErpApp.dll
 D:\Projects\WGSErp\WGSErpApp\WGSErpApp\obj\Debug\WGSErpApp.pdb
+D:\Projects\WGSErp\WGSErpApp\WGSErpApp\obj\Debug\WGSErpApp.csprojResolveAssemblyReference.cache
