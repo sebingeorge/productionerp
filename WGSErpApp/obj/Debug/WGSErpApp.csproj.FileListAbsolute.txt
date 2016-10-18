@@ -133,6 +133,6 @@ D:\WGSErp_17Oct2016\WGSErp\WGSErpApp\WGSErpApp\bin\Microsoft.Owin.Security.OAuth
 D:\WGSErp_17Oct2016\WGSErp\WGSErpApp\WGSErpApp\bin\Microsoft.Owin.Security.Google.xml
 D:\WGSErp_17Oct2016\WGSErp\WGSErpApp\WGSErpApp\bin\Microsoft.Owin.Security.Twitter.xml
 D:\WGSErp_17Oct2016\WGSErp\WGSErpApp\WGSErpApp\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-D:\WGSErp_17Oct2016\WGSErp\WGSErpApp\WGSErpApp\obj\Debug\WGSErpApp.csprojResolveAssemblyReference.cache
 D:\WGSErp_17Oct2016\WGSErp\WGSErpApp\WGSErpApp\obj\Debug\WGSErpApp.dll
 D:\WGSErp_17Oct2016\WGSErp\WGSErpApp\WGSErpApp\obj\Debug\WGSErpApp.pdb
+D:\WGSErp_17Oct2016\WGSErp\WGSErpApp\WGSErpApp\obj\Debug\WGSErpApp.csprojResolveAssemblyReference.cache

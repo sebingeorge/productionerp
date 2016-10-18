@@ -5,6 +5,11 @@
      background-color:/*#796456;*/#a8a6a6;
      /*background-color:#edf7ff;*/
    }
+.body 
+{
+    background: url("../Images/h-back.png") no-repeat scroll 0 52px #e88c40;
+
+}
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
@@ -1210,4 +1215,8 @@ section.content {
 
 .report-highlight{
     color: red;
+}
+
+.module {
+    margin-top: 50px;
 }

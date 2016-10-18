@@ -1,4 +1,40 @@
 ﻿@{
     ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<body class="body">
+
+    <div class="container">
+ 
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col-md-5">
+                    </div>
+                <div class="col-md-7">
+                    <div class="col-md-4 module">
+                        <a href="@Url.Action("index","Home")"><img src="~/Images/admin1.png" /></a>
+                    </div>
+                    <div class="col-md-4 module">
+                        <a href="@Url.Action("index","Home")"><img src="~/Images/production.png" /></a>
+                    </div>
+                    <div class="col-md-4 module">
+                        <a href="@Url.Action("index","Home")"><img src="~/Images/Purchase.png" /></a>
+                    </div>
+                    <div class="col-md-4 module">
+                        <a href="@Url.Action("index","Home")"><img src="~/Images/Sales.png" /></a>
+                    </div>
+                    <div class="col-md-4 module">
+                        <a href="@Url.Action("index","Home")"><img src="~/Images/fa.png" /></a>
+                    </div>
+                    <div class="col-md-4 module">
+                        <a href="@Url.Action("index","Home")"><img src="~/Images/hrms.png" /></a>
+                    </div>
+                    </div>
+                </div>
+        </div>
+
+    </div>
+
+
+</body>

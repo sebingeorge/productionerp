@@ -4,16 +4,23 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - IHits ERP Application</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
 
-    <script type="text/javascript" src="~/Scripts/jquery-1.11.3.min.js"></script>
 
-    <script type="text/javascript" src="~/Scripts/slider.js"></script>
+    <style type="text/css">
+        .sidebar-nav li {
+            display: block;
+        }
+
+        .sidebar-nav ul {
+            padding-left: 15px;
+        }
+    </style>
+
+
+
     <link href="~/Content/slider_css.css" rel="stylesheet" />
 
-    <script src="~/Scripts/jquery-1.10.2.js"></script>
-    <script src="~/Scripts/jquery-1.8.3.js"></script>
+
 
     <link href="~/Content/bootstrap.css" rel="stylesheet" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
@@ -28,162 +35,141 @@
 
 
 
-    <script src="~/Scripts/modernizr-2.6.2.js"></script>
-
-    <script src="~/Scripts/jquery.validate.js"></script>
-    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
-
-
-    <script src="~/Scripts/toastr.min.js"></script>
-
-    <script src="~/Scripts/autocomplete.js"></script>
-
-    <script src="~/Scripts/script.js"></script>
-
-
-
-
-    <script src="~/MVCGridHandler.axd/script.js"></script>
-    <script src="~/Content/jquery.freezeheader.js"></script>
-
-</head>
-<body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("ERP", "Index", "ProductionPlan", new { area = "" }, new { @class = "navbar-brand" })
+        </head>
+        <body>
+            <div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+        @Html.ActionLink("Lokay Chips", "Index", "Home/Index", new { area = "" }, new { @class = "navbar-brand" })
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li>@Html.ActionLink("Home", "Index", "Home/Index")</li>
+                            <li>@Html.ActionLink("About", "About", "Home")</li>
+                            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                        </ul>
+        @Html.Partial("_LoginPartial")
+                    </div>
+                </div>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "ProductionPlan")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
-            </div>
-        </div>
-    </div>
 
-    <div id="wrapper" class="toggled">
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-
-                <li class="sidebar-brand" style="margin-top:20px;">
-                    <a href="#">organizationName</a>
-                </li>
-                <li>
-                        <a href="#" data-toggle="collapse" data-target="#Production-level-menu">Production<span class="caret arrow"></span></a>
-                        <div id="Production-level-menu" class="collapse">
-                            <ul>
-                                <li>
-                                    <a href="#" data-toggle="collapse" data-target="#Admin-projects">Admin<span class="caret arrow"></span></a>
-                                    <div id="Admin-projects" class="collapse">
-                                        <ul>
-                                            <li><a href="@Url.Action("Month", "ProductionPlan")">Month</a></li>
-                                            <li><a href="@Url.Action("FinancialYear", "ProductionPlan")">Financial Year</a></li>
-                                            <li><a class="projectn" href="@Url.Action("Unit", "ProductionPlan")">Unit</a></li>
-                                            <li><a href="@Url.Action("Product", "ProductionPlan")">Product</a></li>
-                                            <li><a href="@Url.Action("CreateProductLine", "ProductionPlan")">Product LIne</a></li>
-                                            <li><a href="@Url.Action("ProductGroup", "ProductionPlan")">Product Group</a></li>
-                                            <li><a href="@Url.Action("ProductSubGroup", "ProductionPlan")">Product Sub Group</a></li>
-                                            <li><a href="@Url.Action("SupplierCategory", "ProductionPlan")">Supplier Category</a></li>
-                                            <li><a href="@Url.Action("RawMaterial", "ProductionPlan")">RawMaterial</a></li>
-                                            <li><a href="@Url.Action("Item", "ProductionPlan")">Item</a></li>
-                                            <li><a href="@Url.Action("Supplier", "ProductionPlan")">Supplier</a></li>
-                                            <li><a href="@Url.Action("Plant", "ProductionPlan")">Plant</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <a href="#" data-toggle="collapse" data-target="#Production-projects">Production<span class="caret arrow"></span></a>
-                                    <div id="Production-projects" class="collapse">
-                                        <ul>
-                                            <li><a href="@Url.Action("CreateProductionPlan", "ProductionPlan")">Production Plan</a></li>
-                                            <li><a href="@Url.Action("PlanedOrder", "ProductionPlan")">Stock Order</a></li>
-                                            <li class="projectn"><a href="@Url.Action("CustomerOrder", "ProductionPlan")">Customer Order</a></li>
-                                            <li><a href="@Url.Action("ProductionSchedule", "ProductionPlan")">Production Schedule</a></li>
-                                            <li><a href="@Url.Action("ProductionPlantoProductionSchedule", "ProductionPlan")">Convert Production Plan to Production Schedule</a></li>
-                                            <li><a href="@Url.Action("ConvertProductionPlanttoplannedorder", "ProductionPlan")">Convert Stock Order to Production Schedule</a></li>
-                                            <li><a href="@Url.Action("ConvertCustomerOrderProductionSchedule", "ProductionPlan")">Convert Customer Order to Production Schedule</a></li>
-                                            <li><a href="@Url.Action("ConvertProductionPlanPurIndent", "ProductionPlan")">Convert Production Plan to Purchase Indent</a></li>
-                                            <li><a href="@Url.Action("ConvertPlannedOrdertoPurReq", "ProductionPlan")">Convert Stock Order to Purchase Indent</a></li>
-                                            <li><a href="@Url.Action("ConvertCustomerOrderPurIndent", "ProductionPlan")">Convert Customer Order to Purchase Indent</a></li>
-                                            <li><a href="@Url.Action("PurchaseIndent", "ProductionPlan")">Purchase Indent</a></li>
-                                            <li><a href="@Url.Action("PurchaseIndentApproval", "ProductionPlan")">Purchase Indent Approval</a></li>
-                                            <li><a href="@Url.Action("PendingPurchaseIndent", "ProductionPlan")">Purchase Order</a></li>
-                                            <li><a href="@Url.Action("PurchaseOrderApproval", "ProductionPlan")">Purchase Order Approval</a></li>
-                                            <li><a href="@Url.Action("PendingPurchaseOrder", "ProductionPlan")">GRN</a></li>
-                                            <li><a href="@Url.Action("ConvertPlannedOrdertoProductionOrder", "ProductionPlan")">Convert Production Schedule to Production Order</a></li>
-                                            <li><a href="@Url.Action("PendingProduction", "ProductionPlan")">Production Order</a></li>
-                                            <li><a href="@Url.Action("ProductionOrderRelease", "ProductionPlan")">Production Order Release</a></li>
-                                            <li><a href="@Url.Action("PendingGoodsIssue", "ProductionPlan")">Issue Material to Production order</a></li>
-                                            <li><a href="@Url.Action("ConfirmProduction", "ProductionPlan")">Daily Production Report</a></li>
-                                            <li><a href="@Url.Action("PendingReceiveProductInventory", "ProductionPlan")">Product QC Released Note</a></li>
-                                            <li><a href="@Url.Action("PendingSalesInvoice", "ProductionPlan")">Sales Invoice</a></li>
-                                            <li><a href="@Url.Action("PendingDeliveryChallan", "ProductionPlan")">Delivery Challan</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
+            <div id="wrapper" class="toggled">
+                <div id="sidebar-wrapper">
+                    <ul class="sidebar-nav">
 
 
-                                <li>
-                                    <a href="#" data-toggle="collapse" data-target="#Report-projects">Report<span class="caret arrow"></span></a>
-                                    <div id="Report-projects" class="collapse">
-                                        <ul>
-                                            <li><a href="@Url.Action("ProductionOrderReport", "ProductionPlan")">Production Order Report</a></li>
-                                            <li><a href="@Url.Action("StockRequirementReport", "ProductionPlan")">Stock Requirement Report</a></li>
-                                            <li><a class="projectn" href="@Url.Action("MaterialPlanningReport", "ProductionPlan")">Material Planning Report</a></li>
-                                            <li><a href="@Url.Action("ProductionPlanMPR", "ProductionPlan")">Production Plan to Material Planning Report</a></li>
-                                            <li><a href="@Url.Action("StockOrderMPR", "ProductionPlan")">Stock Order to Material Planning Report</a></li>
-                                            <li><a href="@Url.Action("CustomerOrderMPR", "ProductionPlan")">Customer Order to Material Planning Report</a></li>
-                                            <li><a href="@Url.Action("ProductionScheduleMPR", "ProductionPlan")">Production Schedule to Material Planning Report</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
+                        <li>
+                                <a href="#" data-toggle="collapse" data-target="#Production-level-menu">Production<span class="caret arrow"></span></a>
+                                <div id="Production-level-menu" class="collapse">
+                                    <ul>
+                                        <li>
+                                            <a href="#" data-toggle="collapse" data-target="#Admin-projects">Admin<span class="caret arrow"></span></a>
+                                            <div id="Admin-projects" class="collapse">
+                                                <ul>
+                                                    <li><a href="@Url.Action("Month", "ProductionPlan")">Month</a></li>
+                                                    <li><a href="@Url.Action("FinancialYear", "ProductionPlan")">Financial Year</a></li>
+                                                    <li><a class="projectn" href="@Url.Action("Unit", "ProductionPlan")">Unit</a></li>
+                                                    <li><a href="@Url.Action("Product", "ProductionPlan")">Product</a></li>
+                                                    <li><a href="@Url.Action("CreateProductLine", "ProductionPlan")">Product LIne</a></li>
+                                                    <li><a href="@Url.Action("ProductGroup", "ProductionPlan")">Product Group</a></li>
+                                                    <li><a href="@Url.Action("ProductSubGroup", "ProductionPlan")">Product Sub Group</a></li>
+                                                    <li><a href="@Url.Action("SupplierCategory", "ProductionPlan")">Supplier Category</a></li>
+                                                    <li><a href="@Url.Action("RawMaterial", "ProductionPlan")">RawMaterial</a></li>
+                                                    <li><a href="@Url.Action("Item", "ProductionPlan")">Item</a></li>
+                                                    <li><a href="@Url.Action("Supplier", "ProductionPlan")">Supplier</a></li>
+                                                    <li><a href="@Url.Action("Plant", "ProductionPlan")">Plant</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <a href="#" data-toggle="collapse" data-target="#Production-projects">Production<span class="caret arrow"></span></a>
+                                            <div id="Production-projects" class="collapse">
+                                                <ul>
+                                                    <li><a href="@Url.Action("CreateProductionPlan", "ProductionPlan")">Production Plan</a></li>
+                                                    <li><a href="@Url.Action("PlanedOrder", "ProductionPlan")">Stock Order</a></li>
+                                                    <li class="projectn"><a href="@Url.Action("CustomerOrder", "ProductionPlan")">Customer Order</a></li>
+                                                    <li><a href="@Url.Action("ProductionSchedule", "ProductionPlan")">Production Schedule</a></li>
+                                                    <li><a href="@Url.Action("ProductionPlantoProductionSchedule", "ProductionPlan")">Convert Production Plan to Production Schedule</a></li>
+                                                    <li><a href="@Url.Action("ConvertProductionPlanttoplannedorder", "ProductionPlan")">Convert Stock Order to Production Schedule</a></li>
+                                                    <li><a href="@Url.Action("ConvertCustomerOrderProductionSchedule", "ProductionPlan")">Convert Customer Order to Production Schedule</a></li>
+                                                    <li><a href="@Url.Action("ConvertProductionPlanPurIndent", "ProductionPlan")">Convert Production Plan to Purchase Indent</a></li>
+                                                    <li><a href="@Url.Action("ConvertPlannedOrdertoPurReq", "ProductionPlan")">Convert Stock Order to Purchase Indent</a></li>
+                                                    <li><a href="@Url.Action("ConvertCustomerOrderPurIndent", "ProductionPlan")">Convert Customer Order to Purchase Indent</a></li>
+                                                    <li><a href="@Url.Action("PurchaseIndent", "ProductionPlan")">Purchase Indent</a></li>
+                                                    <li><a href="@Url.Action("PurchaseIndentApproval", "ProductionPlan")">Purchase Indent Approval</a></li>
+                                                    <li><a href="@Url.Action("PendingPurchaseIndent", "ProductionPlan")">Purchase Order</a></li>
+                                                    <li><a href="@Url.Action("PurchaseOrderApproval", "ProductionPlan")">Purchase Order Approval</a></li>
+                                                    <li><a href="@Url.Action("PendingPurchaseOrder", "ProductionPlan")">GRN</a></li>
+                                                    <li><a href="@Url.Action("ConvertPlannedOrdertoProductionOrder", "ProductionPlan")">Convert Production Schedule to Production Order</a></li>
+                                                    <li><a href="@Url.Action("PendingProduction", "ProductionPlan")">Production Order</a></li>
+                                                    <li><a href="@Url.Action("ProductionOrderRelease", "ProductionPlan")">Production Order Release</a></li>
+                                                    <li><a href="@Url.Action("PendingGoodsIssue", "ProductionPlan")">Issue Material to Production order</a></li>
+                                                    <li><a href="@Url.Action("ConfirmProduction", "ProductionPlan")">Daily Production Report</a></li>
+                                                    <li><a href="@Url.Action("PendingReceiveProductInventory", "ProductionPlan")">Product QC Released Note</a></li>
+                                                    <li><a href="@Url.Action("PendingSalesInvoice", "ProductionPlan")">Sales Invoice</a></li>
+                                                    <li><a href="@Url.Action("PendingDeliveryChallan", "ProductionPlan")">Delivery Challan</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+
+
+                                        <li>
+                                            <a href="#" data-toggle="collapse" data-target="#Report-projects">Report<span class="caret arrow"></span></a>
+                                            <div id="Report-projects" class="collapse">
+                                                <ul>
+                                                    <li><a href="@Url.Action("ProductionOrderReport", "ProductionPlan")">Production Order Report</a></li>
+                                                    <li><a href="@Url.Action("StockRequirementReport", "ProductionPlan")">Stock Requirement Report</a></li>
+                                                    <li><a class="projectn" href="@Url.Action("MaterialPlanningReport", "ProductionPlan")">Material Planning Report</a></li>
+                                                    <li><a href="@Url.Action("ProductionPlanMPR", "ProductionPlan")">Production Plan to Material Planning Report</a></li>
+                                                    <li><a href="@Url.Action("StockOrderMPR", "ProductionPlan")">Stock Order to Material Planning Report</a></li>
+                                                    <li><a href="@Url.Action("CustomerOrderMPR", "ProductionPlan")">Customer Order to Material Planning Report</a></li>
+                                                    <li><a href="@Url.Action("ProductionScheduleMPR", "ProductionPlan")">Production Schedule to Material Planning Report</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
 
 
 
-                            </ul>
-                        </div>
-                    </li>
+                                    </ul>
+                                </div>
+                            </li>
 
-            </ul>
-        </div>
+                    </ul>
+                </div>
 
         @*</nav>*@
         @*<section class="buttonset">
             </section>*@
-        <div id="nav_list">MENU</div>
-        <div id="page-content-wrapper">
-            <div class="container-fluid" id="containerId">
-                @*<a href="#menu-toggle" class="btn btn-default" style="color:white;background-color:black;border-radius:0px 12px 12px 0px; border-color:black;z-index:9999" id="menu-toggle">Menu</a>*@
-                <div class="main">
+                <div id="nav_list">MENU</div>
+                <div id="page-content-wrapper">
+                    <div class="container-fluid" id="containerId">
+                        @*<a href="#menu-toggle" class="btn btn-default" style="color:white;background-color:black;border-radius:0px 12px 12px 0px; border-color:black;z-index:9999" id="menu-toggle">Menu</a>*@
+                        <div class="main">
 
-                    <div class="container-fluid body-content">
+                            <div class="container-fluid body-content">
 
-                        @RenderBody()
+        @RenderBody()
+                            </div>
+                            <div>
+        @Html.ValidationSummary()
+                            </div>
+
+
+
+                            <!-- End Main -->
+                        </div><!-- End Container -->
                     </div>
-                    <div>
-                        @Html.ValidationSummary()
-                    </div>
-                    @Scripts.Render("~/bundles/bootstrap")
-                    @RenderSection("scripts", required: false)
+                </div>
 
-
-                    <!-- End Main -->
-                </div><!-- End Container -->
             </div>
-        </div>
 
-    </div>
-
-    @*<div class="container body-content">
+        @*<div class="container body-content">
         @RenderBody()
         <hr />
         <footer>
@@ -191,8 +177,19 @@
         </footer>
     </div>*@
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
-</body>
-</html>
+
+            <!-- jQuery -->
+            <script src="js/jquery.js"></script>
+            <!-- Bootstrap Core JavaScript -->
+            <script src="js/bootstrap.min.js"></script>
+            <!-- Menu Toggle Script -->
+            <script>
+                $("#menu-toggle").click(function (e) {
+                    e.preventDefault();
+                    $("#wrapper").toggleClass("toggled");
+                });
+            </script>
+
+        </body>
+        </html>
+   
