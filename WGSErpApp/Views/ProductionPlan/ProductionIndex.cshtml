@@ -6,3 +6,33 @@
 
 
 
+<h4>Production</h4>
+
+<div class="form-button menu-w">@Html.ActionLink("Production Plan", "CreateProductionPlan")</div>
+<div class="form-button menu-w">
+    @Html.ActionLink("Stock Order", "PlanedOrder")
+</div>
+<div class="form-button menu-w">
+    @Html.ActionLink("Customer Order", "CustomerOrder")
+</div>
+<div class="form-button menu-w">
+    @Html.ActionLink("Production Schedule", "ProductionSchedule")
+</div>
+<div class="form-button menu-w fs">
+    @Html.ActionLink("Convert Production Plan to Production Schedule", "ProductionPlantoProductionSchedule")
+</div>
+<div class="form-button menu-w fs">
+    @Html.ActionLink("Convert Stock Order to Production Schedule", "ConvertProductionPlanttoplannedorder")
+</div>
+<div class="form-button menu-w fs">
+    @Html.ActionLink("Convert Customer Order to Production Schedule", "ConvertCustomerOrderProductionSchedule")
+</div>
+<div class="form-button menu-w fs">
+    @Html.ActionLink("Convert Production Plan to Purchase Indent", "ConvertProductionPlanPurIndent")
+</div>
+<div class="form-button menu-w fs">
+    @Html.ActionLink("Convert Stock Order to Purchase Indent", "ConvertPlannedOrdertoPurReq")
+</div>
+<div class="form-button menu-w fs">
+    @Html.ActionLink("Convert Customer Order to Purchase Indent", "ConvertCustomerOrderPurIndent")
+</div>
