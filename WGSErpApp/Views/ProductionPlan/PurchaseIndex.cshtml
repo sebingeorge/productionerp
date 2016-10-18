@@ -4,5 +4,17 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>PurchaseIndex</h2>
+<h4>Purchase</h4>
+<div class="form-button menu-w">
+    @Html.ActionLink("Purchase Indent", "PurchaseIndent")
+</div>
+<div class="form-button menu-w">
+    @Html.ActionLink("Purchase Indent Approval", "PurchaseIndentApproval")
+</div>
+<div class="form-button menu-w">
+    @Html.ActionLink("Purchase Order", "PendingPurchaseIndent")
+</div>
+<div class="form-button menu-w">
+    @Html.ActionLink("Purchase Order Approval", "PurchaseOrderApproval")
+</div>
 

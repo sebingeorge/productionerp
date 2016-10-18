@@ -323,6 +323,7 @@
     <Content Include="images\log-b.jpg" />
     <Content Include="images\log-button-h.png" />
     <Content Include="images\log-button.png" />
+    <Content Include="images\logo.png" />
     <Content Include="images\menu-b.jpg" />
     <Content Include="images\next.png" />
     <Content Include="images\open.png" />
