@@ -1,7 +1,7 @@
 ﻿
 @{
     ViewBag.Title = "Index";
-    //Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 
@@ -21,7 +21,7 @@
 
 </style>
 
-
+<h4>Production</h4>
 
 <div class="form-button menu-w">@Html.ActionLink("Production Plan", "CreateProductionPlan")</div>
 <div class="form-button menu-w">
@@ -51,6 +51,8 @@
 <div class="form-button menu-w fs">
     @Html.ActionLink("Convert Customer Order to Purchase Indent", "ConvertCustomerOrderPurIndent")
 </div>
+
+<h4>Purchase</h4>
 <div class="form-button menu-w">
     @Html.ActionLink("Purchase Indent", "PurchaseIndent")
 </div>
