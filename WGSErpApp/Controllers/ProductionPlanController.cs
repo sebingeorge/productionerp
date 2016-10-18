@@ -8,11 +8,17 @@ namespace ArabErp.Web.Controllers
 {
     public class ProductionPlanController : Controller
     {
+        public ActionResult ProductionIndex()
+        {
+            return View();
+        }
+        
         // GET: ProductionPlan
         public ActionResult CreateProductionPlan()
         {
             return View();
         }
+
         public ActionResult CreateProductionPlanAdd()
         {
             return View();

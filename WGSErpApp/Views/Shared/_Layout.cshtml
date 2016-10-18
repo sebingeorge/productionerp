@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - IHits ERP Application</title>
+    <title>IHits ERP Application</title>
 
 
     <style type="text/css">
@@ -35,7 +35,7 @@
 
 
 
-<<<<<<< HEAD
+
         </head>
         <body>
             <div class="navbar navbar-inverse navbar-fixed-top">
@@ -54,12 +54,12 @@
                             <li>@Html.ActionLink("About", "About", "Home")</li>
                             <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                         </ul>
-        @Html.Partial("_LoginPartial")
+     @*   @Html.Partial("_LoginPartial")*@
                     </div>
                 </div>
             </div>
 
-            <div id="wrapper" class="toggled">
+            @*<div id="wrapper" class="toggled">
                 <div id="sidebar-wrapper">
                     <ul class="sidebar-nav">
 
@@ -159,11 +159,9 @@
 
 
 
-    @*<script src="~/MVCGridHandler.axd/script.js"></script>*@
-    <script src="~/Content/jquery.freezeheader.js"></script>
+  >*@
+  
 
-</head>
-<body>
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -172,11 +170,11 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("ERP", "Index", "ProductionPlan", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("ERP", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "ProductionPlan")</li>
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                 </ul>
@@ -292,16 +290,14 @@
 
 
 
-<<<<<<< HEAD
                             <!-- End Main -->
                         </div><!-- End Container -->
                     </div>
                 </div>
 
-            </div>
-=======
 
->>>>>>> f2cef79811908a91278dce22fe2d9fe7f25c3648
+
+
 
         @*<div class="container body-content">
         @RenderBody()

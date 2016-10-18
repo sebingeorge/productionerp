@@ -1,5 +1,6 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿
+@{
+   // ViewBag.Title = "Home Page";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -16,7 +17,7 @@
                         <a href="@Url.Action("index","Home")"><img src="~/Images/admin1.png" /></a>
                     </div>
                     <div class="col-md-4 module">
-                        <a href="@Url.Action("index","Home")"><img src="~/Images/production.png" /></a>
+                        <a href="@Url.Action("ProductionIndex", "ProductionPlan")"><img src="~/Images/production.png" /></a>
                     </div>
                     <div class="col-md-4 module">
                         <a href="@Url.Action("index","Home")"><img src="~/Images/Purchase.png" /></a>
