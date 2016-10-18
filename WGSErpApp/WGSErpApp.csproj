@@ -329,6 +329,7 @@
     <Content Include="Scripts\slider.js" />
     <Content Include="Scripts\toastr.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Views\ProductionPlan\HRMSIndex.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -431,7 +432,6 @@
     <Content Include="Views\ProductionPlan\PurchaseIndex.cshtml" />
     <Content Include="Views\ProductionPlan\SalesIndex.cshtml" />
     <Content Include="Views\ProductionPlan\FinancialAccountsIndex.cshtml" />
-    <Content Include="Views\ProductionPlan\HRMSIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
