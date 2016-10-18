@@ -4,5 +4,12 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>SalesIndex</h2>
+<h4>Sales</h4>
 
+<div class="form-button menu-w">
+    @Html.ActionLink("Customer Order", "CustomerOrder")
+</div>
+
+<div class="form-button menu-w">
+    @Html.ActionLink("Sales Invoice", "PendingSalesInvoice")
+</div>
