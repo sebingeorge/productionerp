@@ -12,7 +12,31 @@ namespace ArabErp.Web.Controllers
         {
             return View();
         }
-        
+
+        public ActionResult AdminIndex()
+        {
+            return View();
+        }
+
+        public ActionResult PurchaseIndex()
+        {
+            return View();
+        }        
+
+
+        public ActionResult SalesIndex()
+        {
+            return View();
+        }      
+
+        public ActionResult FinancialAccountsIndex()
+        {
+            return View();
+        } 
+        public ActionResult HRMSIndex()
+        {
+            return View();
+        } 
         // GET: ProductionPlan
         public ActionResult CreateProductionPlan()
         {

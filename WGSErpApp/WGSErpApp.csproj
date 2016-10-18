@@ -485,6 +485,11 @@
     <Content Include="Views\ProductionPlan\Unit.cshtml" />
     <Content Include="Scripts\selectric\.csscomb.json" />
     <Content Include="Views\ProductionPlan\ProductionIndex.cshtml" />
+    <Content Include="Views\ProductionPlan\AdminIndex.cshtml" />
+    <Content Include="Views\ProductionPlan\PurchaseIndex.cshtml" />
+    <Content Include="Views\ProductionPlan\SalesIndex.cshtml" />
+    <Content Include="Views\ProductionPlan\FinancialAccountsIndex.cshtml" />
+    <Content Include="Views\ProductionPlan\HRMSIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
